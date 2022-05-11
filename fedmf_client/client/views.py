@@ -12,7 +12,7 @@ from client import user_training, parameter
 
 def init(request):
     user_vector = np.random.normal(size=[1, parameter.hidden_dim])
-    np.save('user_vector.txt', user_vector)
+    np.save('user_vector.npy', user_vector)
     return HttpResponse('success to init user vector')
 
 def load_user_vector(request):
